@@ -18,14 +18,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => AuthProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AuthProvider()),
+      ],
       child: MaterialApp(
-        title: 'Meu App',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
+        home: Scaffold(
+          body: AuthenticationWrapper(),
         ),
-        home: AuthenticationWrapper(),
       ),
     );
   }
