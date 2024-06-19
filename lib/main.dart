@@ -23,6 +23,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => AuthProvider()),
       ],
       child: MaterialApp(
+        theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white,
+        ),
         home: Scaffold(
           body: AuthenticationWrapper(),
         ),

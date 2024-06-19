@@ -25,7 +25,7 @@ class CategoriesWidget extends StatelessWidget {
 
         List<Widget> categoryItems = snapshot.data!.map((data) {
           return Padding(
-            padding: const EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 5),
+            padding: const EdgeInsets.only(left: 20, right: 0, top: 5, bottom: 5),
             child: CategoryItem(
               image: data['imageUrl'] ?? 'https://exemplo.com/imagens/default.jpg',
               title: data['name'] ?? 'Sem Título',

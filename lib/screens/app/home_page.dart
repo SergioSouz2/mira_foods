@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mira_foods/widgets/banner/banner_widget.dart';
 import 'package:mira_foods/widgets/category/category_wedget.dart';
 import 'package:mira_foods/widgets/header/header_widget.dart';
+import 'package:mira_foods/widgets/restaurant/restaurant_wedget.dart';
 import 'package:mira_foods/widgets/search/search_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,7 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return const Scaffold(
+    return  const Scaffold(
       body: SingleChildScrollView( // Adiciona SingleChildScrollView aqui
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,6 +54,7 @@ class HomePage extends StatelessWidget {
           SizedBox(height: 16),
           
           BannerWidget(image: 'assets/images/banner_burguer.png'),
+          SizedBox(height: 16),
 
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
@@ -79,6 +81,10 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+          SizedBox(height: 16),
+
+            RestaurantsWidget(),
+          SizedBox(height: 16),
 
           ],
         ),
