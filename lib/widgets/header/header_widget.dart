@@ -11,7 +11,7 @@ class HeaderWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Text(
-              'Food Fleet', 
+              'Mira Foods', 
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w900,

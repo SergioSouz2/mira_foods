@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:mira_foods/services/database_service.dart'; // Importe o serviço de banco de dados
 
 class AuthProvider with ChangeNotifier {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final DatabaseService _dbService = DatabaseService(); // Instância do serviço de banco de dados
   User? _user;
 
   AuthProvider() {
@@ -26,6 +28,10 @@ class AuthProvider with ChangeNotifier {
   }
 
   User? get user => _user;
+
+  Future<List<String>> getDocuments(String collectionName) async {
+    return _dbService.getCollection(collectionName);
+  }
 
   Future<void> signOut() async {
     await _auth.signOut();
