@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mira_foods/widgets/banner/banner_widget.dart';
 import 'package:mira_foods/widgets/category/category_wedget.dart';
 import 'package:mira_foods/widgets/header/header_widget.dart';
 import 'package:mira_foods/widgets/search/search_widget.dart';
@@ -17,6 +18,13 @@ class HomePage extends StatelessWidget {
             HeaderWidget(),
             SearchWidget(),
             CategoriesWidget(),
+
+            SizedBox(height: 20),
+            
+            BannerWidget(image: 'assets/images/banner_pizza.png'),
+
+            SizedBox(height: 20),
+
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child:  Row(
@@ -43,6 +51,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
           SizedBox(height: 16),
+          
+          BannerWidget(image: 'assets/images/banner_burguer.png'),
 
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
